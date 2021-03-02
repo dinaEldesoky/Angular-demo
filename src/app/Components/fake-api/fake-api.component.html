@@ -1,0 +1,23 @@
+<table class="table mt-2">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">year</th>
+      <th scope="col">color</th>
+      <th scope="col">pantone_value</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of productList.data let sn = index">
+      <td>{{sn+1}} </td>
+      <td>{{br.name}}</td>
+      <td>{{br.year}}</td>
+      <td>{{br.color}}</td>
+      <td>{{br.pantone_value}} </td>
+
+
+    </tr>
+  </tbody>
+</table>

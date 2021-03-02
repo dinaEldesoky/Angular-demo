@@ -1,0 +1,24 @@
+<table class="table mt-2">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">CategoryID</th>
+      <th scope="col">Image</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of productList let sn = index">
+      <td>{{sn+1}} </td>
+      <td>{{br.Name}}</td>
+      <td>{{br.Quantity}}</td>
+      <td>{{br.Price | currency : 'EGP'}}</td>
+      <td>{{br.CatigoryId}} </td>
+      <td>{{br.Img}} </td>
+
+    </tr>
+  </tbody>
+</table>

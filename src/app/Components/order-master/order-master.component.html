@@ -1,0 +1,42 @@
+<p>order-master works!</p>
+<h2>Order Master</h2>
+<label>Selected Category : </label>
+<select [(ngModel)]="selected" id="category">
+  <option *ngFor="let br of Category" [value]="br.id"> {{br.Name}} </option>
+</select>
+<br>
+<div>Selected Category ID : {{selected}}</div>
+
+<hr>
+<div class="bg-light">
+  <app-order-detail (totalPriceChange)="onTotalPriceChange($event)" [inputCatID]="selected"></app-order-detail>
+</div>
+<hr>
+
+<div>
+  Total Order Price:{{orderFromOutput}}
+</div>
+
+<br><br>
+
+Client Name <input type="text" class="form-control" #clientName value="Mobile">
+
+<br><br>
+
+<div>Selected Products</div>
+<br>
+<table class="table">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Items Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of orders">
+      <th>{{br.Name}}</th>
+      <th>{{br.Item}}</th>
+
+    </tr>
+  </tbody>
+</table>

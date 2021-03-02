@@ -1,0 +1,70 @@
+.container{
+    height: 100vh;
+    background-color: lightcyan;
+    display: flex;
+}
+
+/* Sidebar container */
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: burlywood;
+}
+
+/* Sidebar blocks */
+.sidebarItem{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+
+/* Right side Menu */
+.menuContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: wheat;
+}
+
+/* Blocks */
+.item1{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;   
+}
+.item2{
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;   
+}
+
+/* Right side down */
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: yellow ;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.first{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+}
+.second{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+
+}
+
+/* Blocks */
+.rightSideChild{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}

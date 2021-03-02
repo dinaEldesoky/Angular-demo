@@ -1,0 +1,41 @@
+<br>
+<button (click)="addProduct()" type="button" class="btn btn-info mb-4">Add Product</button>
+<br>
+<table class="table">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Items Count</th>
+      <th scope="col">Buy</th>
+      <th scope="col">Details</th>
+      <th scope="col">Popup</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of prodSelCat ; let sn = index">
+      <th>{{sn+1}} </th>
+      <th>{{br.Name}}</th>
+      <th>{{br.Quantity}}</th>
+      <th>{{br.Price | currency : 'EGP'}}</th>
+      <th><input #ItemCount type="number" class="form-control" value="1"></th>
+      <th>
+        <button class="btn btn-success" (click)="CalcTotalPrice(br.Price,ItemCount.value , br.Name)">Buy</button>
+      </th>
+      <th>
+        <button class="btn btn-success" (click)="viewProduct(br.id)">Details</button>
+      </th>
+      <th>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
+          (click)="openPopup(br.id)">Open Modal</button>
+      </th>
+    </tr>
+    Total Price :{{orderTotalPrice}}
+
+
+  </tbody>
+</table>

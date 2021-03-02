@@ -1,0 +1,110 @@
+<p>products works!</p>
+<h3>Store Name : {{StoreInfo.Name}}</h3>
+<img [src]="StoreInfo.logo" class="img-fluid">
+<br><br>
+<h3 *ngIf="(dis != 'No Discount')">We offer an explicit discount of: {{dis}}</h3>
+<br><br>
+<h3>Store Branches</h3>
+<ul>
+  <li *ngFor="let br of StoreInfo.Branches">{{br}}</li>
+</ul>
+<br>
+<h3>Store Products</h3>
+
+<select [(ngModel)]="selected" id="category">
+  <option *ngFor="let br of Category" [value]="br.id"> {{br.Name}} </option>
+</select>
+
+<br>
+
+<div>
+  selectedCategorie : {{selected}}
+</div>
+<br>
+<input type="text" class="form-control" id="ClientName" [(ngModel)]="clinetName">
+<br>
+<div>
+  Client Name : {{clinetName}}
+</div>
+<br>
+
+<button class="btn btn-success" (click)="toggleTable()">Buy</button>
+
+<br><br>
+
+<table class="table" *ngIf="IsOpen;else other_content">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">CategoryID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of ProductList let sn = index" [hidden]="br.Quantity==0" [class.change]="br.Quantity==1">
+      <th *ngIf="br.CatigoryId == selected">{{sn+1}} </th>
+      <th *ngIf="br.CatigoryId == selected">{{br.Name}}</th>
+      <th *ngIf="br.CatigoryId == selected">{{br.Quantity}}</th>
+      <th *ngIf="br.CatigoryId == selected">{{br.Price | currency : 'EGP'}}</th>
+      <th *ngIf="br.CatigoryId == selected">{{br.CatigoryId}}
+        <span [ngSwitch]="br.CatigoryId">
+          <span *ngSwitchCase="1" class="badge badge-secondary">Mobile</span>
+          <span *ngSwitchCase="2" class="badge badge-secondary">Laptop</span>
+        </span>
+      </th>
+      <th *ngIf="br.CatigoryId == selected">
+        <button class="btn btn-success" (click)="br.Quantity=br.Quantity-1;">Buy</button>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #other_content>
+  <h3>Thanks for purchasing from our Store {{clinetName}} </h3>
+</ng-template>
+
+<br>
+
+<div appStyling hoverColor="lightblue" class="card" style="width: 18rem;">
+
+  <img class="card-img-top img-fluid pl-5 pt-2" style="width: 150px;height: 200px;"
+    src="../../../assets/iphone-160307_1280.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Mobile Iphone</h5>
+    <h6 class="card-text">{{date | date:'mediumDate'}}</h6>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+  </div>
+
+</div>
+
+<br><br>
+<h3>Card Number using directive</h3>
+Card Number : <input appStylingInput [(ngModel)]="cardNumber" type="text" class="form-control">
+
+<br><br>
+
+<h3>Card Number using pipe</h3>
+<div>
+  Card Number:{{cardNumber | formatInput }}
+</div>
+
+<br><br>
+<h3>National Number using pipe</h3>
+<input type="text" [(ngModel)]="NationalID">
+<div>
+
+  National ID FullDate : {{NationalID | nationalID :'fullDate'}}
+  <br>
+  National ID Day : {{NationalID | nationalID:'DD' }}
+  <br>
+  National ID Month : {{NationalID | nationalID  :'MM'}}
+  <br>
+  National ID Year : {{NationalID | nationalID : 'YY' }}
+  <br>
+
+</div>
+
+<br><br>

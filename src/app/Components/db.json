@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "Name": "Lenvo thinpad X230",
+      "Price": 100,
+      "Quantity": 10,
+      "CatigoryId": 1,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 2,
+      "Name": "Dell",
+      "Price": 200,
+      "Quantity": 20,
+      "CatigoryId": 1,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "Name": "Lenovo Tab",
+      "Price": 100,
+      "Quantity": 10,
+      "CatigoryId": 2,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 4,
+      "Name": "Samsung Tab",
+      "Price": 100,
+      "Quantity": 10,
+      "CatigoryId": 2,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 5,
+      "Name": "Samsung note 10",
+      "Price": 100,
+      "Quantity": 10,
+      "CatigoryId": 3,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 6,
+      "Name": "Samsung S10",
+      "Price": 100,
+      "Quantity": 10,
+      "CatigoryId": 3,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 7,
+      "Name": "Lenvo thinpad",
+      "Price": 1000,
+      "Quantity": 11,
+      "CatigoryId": 1,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "id": 8,
+      "Name": "Lenvo thinpad",
+      "Price": 1000,
+      "Quantity": 11,
+      "CatigoryId": 1,
+      "Img": "https://picsum.photos/200"
+    },
+    {
+      "Name": "thguth",
+      "Quantity": 1,
+      "Price": "12",
+      "Img": "",
+      "CatigoryId": 1,
+      "id": 9
+    },
+    {
+      "Name": "gdyg",
+      "Quantity": "12",
+      "Price": "11",
+      "CatigoryId": "3",
+      "id": 10
+    },
+    {
+      "prdName": "newProduct",
+      "prdQuantity": "12",
+      "prdPrice": "11",
+      "id": 11
+    },
+    {
+      "prdName": "newPro",
+      "prdQuantity": "12",
+      "prdPrice": "11",
+      "id": 12
+    },
+    {
+      "prdName": "n",
+      "prdQuantity": "2",
+      "prdPrice": "1",
+      "id": 13
+    },
+    {
+      "prdName": "new",
+      "prdQuantity": "1",
+      "prdPrice": "11",
+      "id": 14
+    },
+    {
+      "Name": "new",
+      "Quantity": "1",
+      "Price": "11",
+      "id": 15
+    },
+    {
+      "Name": "new",
+      "Quantity": "12",
+      "Price": "11",
+      "CategoryId": "1",
+      "id": 16
+    },
+    {
+      "Name": "newProduct",
+      "Quantity": "11",
+      "Price": "11",
+      "CategoryId": "1",
+      "id": 17
+    }
+  ],
+  "Categories": [
+    {
+      "id": 1,
+      "Name": "Laptops"
+    },
+    {
+      "id": 2,
+      "Name": "Tablets"
+    },
+    {
+      "id": 3,
+      "Name": "Mobiles"
+    }
+  ],
+  "users": [
+    {
+      "username": "dina",
+      "password": 1234
+    },
+    {
+      "username": "sarah",
+      "password": 3456
+    },
+    {
+      "username": "manosha",
+      "password": 8888
+    }
+  ]
+}
